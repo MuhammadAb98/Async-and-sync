@@ -1,9 +1,14 @@
 console.log("Start Group");
 
-let data ="Content"
+function breakfast(){
+setTimeout(function(){console.log("breakfast complete")},100);
+}
 
+function morning(){
+console.log("breakfast start");
+breakfast();
+}
 
-setTimeout(function() {console.log(data)},1000)
-
+morning(); 
 console.log("End Group");
 
