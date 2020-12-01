@@ -1,8 +1,12 @@
 let promise = new Promise(function(resolve,reject){
-    console.log("new promise")
-    resolve()
+    
+    setTimeout(function(){
+        console.log("new pormise")
+        resolve()
+    },1000)
+    
 })
 
 promise.then(function(){
-   // console.log("promise resolve")
+    console.log("promise resolve")
 })
