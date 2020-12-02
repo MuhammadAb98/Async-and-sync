@@ -14,4 +14,4 @@ result.then(resolveFunction).catch(rejectFunction);
 console.log('hello world');
 
 //this is a synchronous
-
+ 
