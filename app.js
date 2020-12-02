@@ -1,12 +1,17 @@
-let promise = new Promise(function(resolve,reject){
-    
-    setTimeout(function(){
-        console.log("new pormise")
-        resolve()
-    },1000)
-    
+const anyFunction =()=>{
+return (((Math.floor(Math.random()*10))%2)===0)?true : false
+}
+
+const resolveFunction =()=>console.log("success");
+const rejectFunction =()=>console.log("failure");
+
+const result = new Promise((resolve,reject)=>{
+setTimeout(()=>(anyFunction() ? resolve() : reject() ),2000)
 })
 
-promise.then(function(){
-    console.log("promise resolve")
-})
+result.then(resolveFunction).catch(rejectFunction);
+
+console.log('hello world');
+
+//this is a synchronous
+
