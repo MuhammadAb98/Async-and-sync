@@ -52,8 +52,21 @@ return Promname;
 
 
 async function startprocess(){  
-    let foodvalue = await prepareFood();  //await will be used on calling
-    console.log(foodvalue);
+  try{
+
+      let foodvalue = await prepareFood(2);  //await will be used on calling
+      console.log(foodvalue);
+    
+      let FrenchToastValue = await prepareFrenchToast();
+      console.log(FrenchToastValue);
+    
+      let CoffeeValue = await preparecoffie();
+      console.log(CoffeeValue);
+  }
+
+  catch{
+ console.log(error);
+  }
 }
 
 
