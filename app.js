@@ -26,7 +26,7 @@ function prepareFrenchToast(callback) {
             setTimeout(() => {
                 console.log("prepare French Toast");
                 resolve("French Toast is ready");
-            }, 2000); 
+            }, 1500); 
         });
     return Promname;
 }
@@ -36,9 +36,9 @@ function preparecoffie(callback) {
 
         function (resolve, reject) {
     setTimeout(() => {
-        console.log("prepare coffie");
-        resolve("prepare coffie is ready");
-    }, 3000)
+        console.log("prepare coffee");
+        resolve("prepare coffee is ready");
+    }, 2000)
 });
 return Promname;
 }
@@ -52,6 +52,10 @@ return prepareFrenchToast();
 })
 .then(function(prepareFrenchToast){
     console.log("French Toast Is Ready CallBack=",prepareFrenchToast)
+    return preparecoffie();
+})
+.then(function(preparecoffie){
+    console.log("French Toast Is Ready CallBack=",preparecoffie)
 })
 .catch(function(error){
 console.log("Error=",error)
