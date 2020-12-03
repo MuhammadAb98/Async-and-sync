@@ -4,7 +4,7 @@ console.log("Before Prepare Food");
 
 
 
-function prepareFood(callback) {
+function prepareFood() {
     let Promname = new Promise(
 
         function (resolve, reject) {
@@ -19,7 +19,7 @@ function prepareFood(callback) {
     return Promname;
 }
 
-function prepareFrenchToast(callback) {
+function prepareFrenchToast() {
     let Promname = new Promise(
 
         function (resolve, reject) {
@@ -31,7 +31,7 @@ function prepareFrenchToast(callback) {
     return Promname;
 }
 
-function preparecoffie(callback) {
+function preparecoffie() {
     let Promname = new Promise(
 
         function (resolve, reject) {
