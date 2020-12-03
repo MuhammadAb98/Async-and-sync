@@ -1,17 +1,30 @@
-const anyFunction =()=>{
-return (((Math.floor(Math.random()*10))%2)===0)?true : false
+console.log ("Before Prepare Food");
+
+function prepareFood(callback){
+    setTimeout(()=>{
+        console.log("prepare Food");
+        callback("Food is ready");
+    },1000)
 }
 
-const resolveFunction =()=>console.log("success");
-const rejectFunction =()=>console.log("failure");
+function prepareFrenchToast(callback){
+    setTimeout(()=>{
+        console.log("prepare French Toast");
+        callback("prepare French is ready");
+    },2000)
+}
 
-const result = new Promise((resolve,reject)=>{
-setTimeout(()=>(anyFunction() ? resolve() : reject() ),2000)
-})
+function mycallback(Value){
+    console.log("Food callback=",Value);
+    prepareFrenchToast(FrenchToastcallback);
+}
+function FrenchToastcallback(Value){
+    console.log("French Toast callback=",Value);
+}
 
-result.then(resolveFunction).catch(rejectFunction);
 
-console.log('hello world');
 
-//this is a synchronous
- 
+prepareFood(mycallback);
+
+
+console.log("After prepare food dinner is ready");
