@@ -1,6 +1,5 @@
 console.log("Before Prepare Food");
 
-//Code Before using Async and await
 
 
 
@@ -51,7 +50,15 @@ function preparecoffie() {
 return Promname;
 }
 
-let val1 =prepareFood(2);
+
+async function startprocess(){  
+    let foodvalue = await prepareFood();  //await will be used on calling
+    console.log(foodvalue);
+}
+
+
+startprocess();
+/*let val1 =prepareFood(2);
 //console.log("Promise=",val1);
 
 val1.then(function(value){
@@ -68,7 +75,7 @@ return prepareFrenchToast();
 .catch(function(error){
 console.log("Error=",error)
 });
-
+*/
 
 
 
