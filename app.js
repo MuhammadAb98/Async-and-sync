@@ -54,7 +54,7 @@ return Promname;
 async function startprocess(){  
   try{
 
-      let foodvalue = await prepareFood(2);  //await will be used on calling
+      let foodvalue = await prepareFood(1);  //await will be used on calling
       console.log(foodvalue);
     
       let FrenchToastValue = await prepareFrenchToast();
@@ -64,7 +64,7 @@ async function startprocess(){
       console.log(CoffeeValue);
   }
 
-  catch{
+  catch(error){
  console.log(error);
   }
 }
